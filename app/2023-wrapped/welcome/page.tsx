@@ -1,9 +1,7 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
-import { Button } from "@/components/Button";
-import { Icon } from "@/components/Icon";
+import { CustomConnectButton } from "./components/CustomConnectButton";
 
 export type WelcomePageProps = {};
 
@@ -41,17 +39,7 @@ export default function WelcomePage(props: WelcomePageProps) {
           crypto world during the year, and what your activities were.
         </p>
       </section>
-      <Button className={"px-4 mt-12"}>
-        <Link
-          href={"/2023-wrapped/review-txn"}
-          className={
-            "gradient-blue flex justify-center items-center text-md gap-1 font-semibold"
-          }
-        >
-          Connect Suiet
-          <Icon name={"arrow-left-gradient-blue"} size={16} />
-        </Link>
-      </Button>
+      <CustomConnectButton className={"mt-12"} />
     </main>
   );
 }
