@@ -18,6 +18,7 @@ const config: Config = {
           400: "#7D89B0",
         },
         "gray-btn-hover": "#EFF1F5",
+        accent: "#0096FF",
       },
     },
   },

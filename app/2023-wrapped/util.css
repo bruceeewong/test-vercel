@@ -1,0 +1,13 @@
+.main-font {
+    font-family: "Work Sans";
+    font-size: 28px;
+    line-height: 36px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.glassmorph {
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0.5;
+    backdrop-filter: blur(50px);
+}

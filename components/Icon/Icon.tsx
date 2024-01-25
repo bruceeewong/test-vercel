@@ -6,10 +6,11 @@ import Image from "next/image";
 export type IconProps = Extendable & {
   name: keyof typeof iconMap;
   size?: number;
+  rotate?: number;
 };
 
 export const Icon = (props: IconProps) => {
-  const { size = 24 } = props;
+  const { size = 24, rotate = 0 } = props;
   const icon = iconMap[props.name];
 
   return (
@@ -19,6 +20,9 @@ export const Icon = (props: IconProps) => {
         alt={props.name}
         width={size}
         height={size}
+        style={{
+          transform: `rotate(${props.rotate}deg)`,
+        }}
       />
     </i>
   );
