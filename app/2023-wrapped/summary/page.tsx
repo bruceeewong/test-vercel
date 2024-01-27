@@ -4,6 +4,16 @@ import styles from "./styles.module.css";
 import clsx from "clsx";
 import { staticImg } from "@/configs/static-url";
 import { GridImage } from "@/app/2023-wrapped/summary/components/GridImage";
+import {
+  SupportedSocialMedia,
+  Toolbar,
+  ToolbarContinueButton,
+  ToolbarCopyButton,
+  ToolbarPrevButton,
+  ToolbarShareButton,
+} from "@/app/2023-wrapped/components/Toolbar";
+import { Routes } from "@/configs/routes";
+import { ToolbarCloseButton } from "@/app/2023-wrapped/components/Toolbar/ToolbarCloseButton";
 
 export type ReviewSummaryPageProps = {};
 
@@ -155,6 +165,19 @@ export default function ReviewSummaryPage(props: ReviewSummaryPageProps) {
           </div>
         </div>
       </section>
+
+      <footer className={"mt-[40px]"}>
+        <Toolbar className={"w-[1280px]"}>
+          <ToolbarPrevButton url={Routes.WRAP23__REVIEW_TXN} />
+          <div className={"flex items-center gap-4"}>
+            <ToolbarCopyButton />
+            <ToolbarShareButton
+              socialMediaName={SupportedSocialMedia.TWITTER}
+            />
+            <ToolbarCloseButton />
+          </div>
+        </Toolbar>
+      </footer>
     </main>
   );
 }

@@ -9,15 +9,15 @@ export type GuardsProps = Extendable & {};
 
 export const Guards = (props: GuardsProps) => {
   const router = useRouter();
-  useWalletGuard({
-    onConnected: () => {
-      console.log("onGuarded");
-    },
-    onDisconnected: () => {
-      console.log("onNotGuarded");
-      router.replace(Routes.WRAP23__WELCOME);
-    },
-  });
+  // useWalletGuard({
+  //   onConnected: () => {
+  //     console.log("onGuarded");
+  //   },
+  //   onDisconnected: () => {
+  //     console.log("onNotGuarded");
+  //     router.replace(Routes.WRAP23__WELCOME);
+  //   },
+  // });
 
   return props.children;
 };

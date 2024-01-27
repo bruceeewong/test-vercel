@@ -2,7 +2,14 @@ import { Metadata } from "next";
 import { SoftCard } from "@/app/2023-wrapped/components/SoftCard";
 import { NftCards } from "@/app/2023-wrapped/review-nft-dapp/components/NftCards";
 import { HighlightText } from "@/app/2023-wrapped/components/HighlightText";
-import { Toolbar } from "@/app/2023-wrapped/components/Toolbar";
+import {
+  SupportedSocialMedia,
+  Toolbar,
+  ToolbarContinueButton,
+  ToolbarCopyButton,
+  ToolbarPrevButton,
+  ToolbarShareButton,
+} from "@/app/2023-wrapped/components/Toolbar";
 import { Routes } from "@/configs/routes";
 
 export type ReviewNftDappPageProps = {};
@@ -36,11 +43,16 @@ export default function ReviewNftDappPage(props: ReviewNftDappPageProps) {
         </div>
       </SoftCard>
       <footer className={"mt-[40px]"}>
-        <Toolbar
-          prevUrl={Routes.WRAP23__REVIEW_TXN}
-          nextUrl={Routes.WRAP23__SUMMARY}
-          className={"w-[1200px]"}
-        />
+        <Toolbar className={"w-[1200px]"}>
+          <ToolbarPrevButton url={Routes.WRAP23__REVIEW_TXN} />
+          <div className={"flex items-center gap-4"}>
+            <ToolbarCopyButton />
+            <ToolbarShareButton
+              socialMediaName={SupportedSocialMedia.TWITTER}
+            />
+            <ToolbarContinueButton url={Routes.WRAP23__SUMMARY} />
+          </div>
+        </Toolbar>
       </footer>
     </main>
   );

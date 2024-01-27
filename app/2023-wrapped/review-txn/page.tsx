@@ -7,7 +7,14 @@ import { Icon } from "@/components/Icon";
 import Link from "next/link";
 import { Routes } from "@/configs/routes";
 import { NavBackButton } from "@/app/2023-wrapped/components/NavBackButton";
-import { Toolbar } from "@/app/2023-wrapped/components/Toolbar";
+import {
+  SupportedSocialMedia,
+  Toolbar,
+  ToolbarContinueButton,
+  ToolbarCopyButton,
+  ToolbarPrevButton,
+  ToolbarShareButton,
+} from "@/app/2023-wrapped/components/Toolbar";
 
 export type ReviewTxnPageeProps = {};
 
@@ -44,10 +51,11 @@ export default function ReviewTxnPage(props: ReviewTxnPageeProps) {
       </SoftCard>
 
       <footer className={"mt-[40px]"}>
-        <Toolbar
-          nextUrl={Routes.WRAP23__REVIEW_NFT_DAPP}
-          className={"w-[1200px]"}
-        />
+        <Toolbar className={"w-[1200px] !justify-end gap-4"}>
+          <ToolbarCopyButton />
+          <ToolbarShareButton socialMediaName={SupportedSocialMedia.TWITTER} />
+          <ToolbarContinueButton url={Routes.WRAP23__REVIEW_NFT_DAPP} />
+        </Toolbar>
       </footer>
     </main>
   );
