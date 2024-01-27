@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Image from "next/image";
 import styles from "./styles.module.css";
 import clsx from "clsx";
-import { staticImg } from "@/configs/static-url";
 import { GridImage } from "@/app/2023-wrapped/summary/components/GridImage";
 import {
   SupportedSocialMedia,
@@ -14,6 +13,7 @@ import {
 } from "@/app/2023-wrapped/components/Toolbar";
 import { Routes } from "@/configs/routes";
 import { ToolbarCloseButton } from "@/app/2023-wrapped/components/Toolbar/ToolbarCloseButton";
+import SuietLogoBare from "@/public/img/suiet-logo-bare.svg";
 
 export type ReviewSummaryPageProps = {};
 
@@ -134,6 +134,26 @@ export default function ReviewSummaryPage(props: ReviewSummaryPageProps) {
           <div
             className={clsx(
               styles["grid-item"],
+              styles["grid-item-logo"],
+              "flex flex-col justify-center",
+            )}
+          >
+            <div className={"relative z-10 flex flex-col items-center gap-2"}>
+              <SuietLogoBare />
+              <h1
+                className={clsx(
+                  styles["heading-hero"],
+                  "text-white text-center",
+                )}
+              >
+                Suiet Wrapped 2023
+              </h1>
+            </div>
+            <GridImage imgName={"summary-logo-bg"} />
+          </div>
+          <div
+            className={clsx(
+              styles["grid-item"],
               styles["grid-item-nft"],
               "flex flex-col justify-end",
             )}
@@ -168,7 +188,7 @@ export default function ReviewSummaryPage(props: ReviewSummaryPageProps) {
 
       <footer className={"mt-[40px]"}>
         <Toolbar className={"w-[1280px]"}>
-          <ToolbarPrevButton url={Routes.WRAP23__REVIEW_TXN} />
+          <ToolbarPrevButton url={Routes.WRAP23__REVIEW_NFT_DAPP} />
           <div className={"flex items-center gap-4"}>
             <ToolbarCopyButton />
             <ToolbarShareButton
