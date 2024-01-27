@@ -15,8 +15,7 @@ export const GridImage = (props: GridImageProps) => {
     <Image
       src={staticImg(`wrap23-${imgName}.png`)}
       alt={imgName}
-      layout="fill"
-      objectFit="cover"
+      fill={true}
       className={clsx(styles["grid-img"], props.className)}
       style={props.style}
     />
