@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         "gray-cool": {
           400: "#7D89B0",
+          700: "#404968",
         },
         "gray-btn-hover": "#EFF1F5",
         accent: "#0096FF",
