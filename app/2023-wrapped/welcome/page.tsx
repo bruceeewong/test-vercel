@@ -11,7 +11,12 @@ export const metadata: Metadata = {
 
 export default function WelcomePage(props: WelcomePageProps) {
   return (
-    <main className={"flex flex-col flex-1 justify-center items-center px-4"}>
+    <main
+      className={clsx(
+        "flex flex-col flex-1 justify-center items-center px-12",
+        "md:px-4",
+      )}
+    >
       <Image
         className={"absolute z-[-1]"}
         src={"/img/wrap23-welcome-bg.png"}
@@ -29,12 +34,18 @@ export default function WelcomePage(props: WelcomePageProps) {
           height={88}
           alt={"suiet-logo"}
         />
-        <h1 className={clsx("gradient-blue", "text-5xl font-bold text-center")}>
+        <h1
+          className={clsx(
+            "gradient-blue",
+            "text-center text-4xl font-bold ",
+            "md:text-5xl",
+          )}
+        >
           Suiet Wallet
           <br />
           2023 Wrapped
         </h1>
-        <p className={"max-w-[493px] text-gray-cool-400"}>
+        <p className={clsx("text-gray-cool-400", "md:max-w-[493px]")}>
           Say hello to your Suiet wallet for 2023. Find out you kept joining in
           crypto world during the year, and what your activities were.
         </p>
