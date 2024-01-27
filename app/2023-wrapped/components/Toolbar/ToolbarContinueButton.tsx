@@ -20,7 +20,14 @@ export const ToolbarContinueButton = (props: ToolbarContinueButtonProps) => {
         href={props.url}
         className={"flex  justify-center items-center gap-2"}
       >
-        <span className={"gradient-blue text-md font-semibold"}>Continue</span>
+        <span
+          className={clsx(
+            "hidden gradient-blue text-md font-semibold",
+            "md:block",
+          )}
+        >
+          Continue
+        </span>
         <Icon name={"arrow-right-gradient-blue"} size={16} />
       </Link>
     </Button>

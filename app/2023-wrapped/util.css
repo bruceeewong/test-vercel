@@ -1,5 +1,11 @@
 .main-font {
     font-family: "Work Sans";
+    font-size: 26px;
+    line-height: 32px;
+    font-style: italic;
+    font-weight: 700;
+}
+@media screen and (min-width: 768px) {
     font-size: 28px;
     line-height: 36px;
     font-style: italic;

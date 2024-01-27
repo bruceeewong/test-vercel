@@ -14,7 +14,12 @@ export const ToolbarCopyButton = (props: ToolbarCopyButtonProps) => {
       )}
     >
       <Icon name={"screenshot"} size={16} />
-      <span className={"gradient-blue text-md font-semibold"}>
+      <span
+        className={clsx(
+          "hidden gradient-blue text-md font-semibold",
+          "md:block",
+        )}
+      >
         Copy as Image
       </span>
     </Button>

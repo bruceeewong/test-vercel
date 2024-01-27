@@ -15,6 +15,7 @@ import {
   ToolbarPrevButton,
   ToolbarShareButton,
 } from "@/app/2023-wrapped/components/Toolbar";
+import clsx from "clsx";
 
 export type ReviewTxnPageeProps = {};
 
@@ -25,24 +26,37 @@ export const metadata: Metadata = {
 export default function ReviewTxnPage(props: ReviewTxnPageeProps) {
   return (
     <main
-      className={"flex flex-col flex-1 justify-center items-center bg-accent"}
+      className={clsx(
+        "flex flex-col flex-1 bg-accent items-center overflow-hidden",
+        "md:justify-center md:items-center md:overflow-auto",
+      )}
     >
-      <SoftCard className={"w-[1200px] h-[660px]"}>
-        <div className={"flex justify-center w-full h-full p-16  gap-16"}>
+      <SoftCard className={clsx("flex-1", "md:w-[1200px]")}>
+        <div
+          className={clsx(
+            "flex flex-col justify-center w-[100vw] py-12 px-10",
+            "md:flex-row md:p-16 md:gap-16",
+          )}
+        >
           <TxnCards />
-          <div className={"flex flex-col max-w-[400px] gap-4 pt-[40px]"}>
-            <div>
+          <div
+            className={clsx(
+              "flex flex-col max-w-sm",
+              "md:pt-[40px] md:gap-4 md:max-w-[400px]",
+            )}
+          >
+            <div className={"mt-4"}>
               <p className={"main-font text-accent"}>2023,</p>
               <p className={"main-font text-accent"}>
                 you made <HighlightText>36</HighlightText> transactions, trading
                 volume was <HighlightText>129</HighlightText> SUI
               </p>
             </div>
-            <p className={"main-font text-accent"}>
+            <p className={"main-font text-accent  mt-4"}>
               including <HighlightText>19.4</HighlightText> SUI network fees,{" "}
               <HighlightText>20+</HighlightText> kinds of crypto traded
             </p>
-            <p className={"main-font text-accent"}>
+            <p className={clsx("main-font text-accent mt-4")}>
               on 9 Jan, <HighlightText>12.8</HighlightText> SUI was your first
               transaction
             </p>
@@ -50,8 +64,8 @@ export default function ReviewTxnPage(props: ReviewTxnPageeProps) {
         </div>
       </SoftCard>
 
-      <footer className={"mt-[40px]"}>
-        <Toolbar className={"w-[1200px] !justify-end gap-4"}>
+      <footer className={clsx("mt-16 mb-12", "md:mt-[40px] md:mb-0")}>
+        <Toolbar className={clsx("!justify-end gap-4", "md:w-[1200px]")}>
           <ToolbarCopyButton />
           <ToolbarShareButton socialMediaName={SupportedSocialMedia.TWITTER} />
           <ToolbarContinueButton url={Routes.WRAP23__REVIEW_NFT_DAPP} />

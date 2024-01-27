@@ -26,7 +26,7 @@ export default function ReviewSummaryPage(props: ReviewSummaryPageProps) {
     <main
       className={"flex flex-col flex-1 justify-center items-center bg-accent"}
     >
-      <section className={"w-[1280px] h-[680px]"}>
+      <section className={clsx("", "md-w-[1280px] md-h-[680px]")}>
         <div className={clsx(styles["grid-container"])}>
           <div
             className={clsx(

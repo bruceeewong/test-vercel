@@ -20,7 +20,12 @@ export const ToolbarShareButton = (props: ToolbarShareButtonProps) => {
       )}
     >
       <Icon name={"external-link"} size={16} />
-      <span className={"gradient-blue text-md font-semibold"}>
+      <span
+        className={clsx(
+          "hidden gradient-blue text-md font-semibold",
+          "md:block",
+        )}
+      >
         Post on {props.socialMediaName}
       </span>
     </Button>
