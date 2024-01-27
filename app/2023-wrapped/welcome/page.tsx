@@ -1,9 +1,9 @@
-import { Metadata } from "next";
+import { Metadata, NextPage } from "next";
 import Image from "next/image";
 import clsx from "clsx";
-import { CustomConnectButton } from "./components/CustomConnectButton";
+import { CustomConnectButton } from "@/components/buttons/CustomConnectButton";
 
-export type WelcomePageProps = {};
+export type WelcomePageProps = NextPage & {};
 
 export const metadata: Metadata = {
   title: "Welcome",
@@ -39,7 +39,7 @@ export default function WelcomePage(props: WelcomePageProps) {
           crypto world during the year, and what your activities were.
         </p>
       </section>
-      <CustomConnectButton className={"mt-12"} />
+      <CustomConnectButton className={"mt-12"} {...props} />
     </main>
   );
 }
