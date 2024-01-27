@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
+import { Routes } from "@/configs/routes";
 
 export default function Home() {
-  redirect("/2023-wrapped/welcome");
+  redirect(Routes.WRAP23__WELCOME);
   return null;
 }

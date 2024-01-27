@@ -14,7 +14,7 @@ export default function WelcomePage(props: WelcomePageProps) {
     <main className={"flex flex-col flex-1 justify-center items-center px-4"}>
       <Image
         className={"absolute z-[-1]"}
-        src={"/img/2023-wrapped-welcome-bg.png"}
+        src={"/img/wrap23-welcome-bg.png"}
         fill
         sizes="100vw"
         style={{

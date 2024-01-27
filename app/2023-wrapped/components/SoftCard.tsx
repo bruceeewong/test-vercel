@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Extendable } from "@/types/global";
-import IrregularRect from "@/public/img/irregular-rect.svg";
+import IrregularRect from "@/public/img/wrap23-irregular-rect.svg";
 
 export type SoftCardProps = Extendable & {};
 
