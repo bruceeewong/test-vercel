@@ -1,0 +1,54 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 16px;
+}
+
+.grid-item {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+.grid-item-txn-made {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+.grid-item-network-fees {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.grid-item-sui-tvl {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+.grid-item-defi {
+     grid-column: 4 / 5;
+     grid-row: 1 / 2;
+ }
+.grid-item-investment {
+    grid-column: 5 / 6;
+    grid-row: 1 / 4;
+}
+
+.grid-item-sui-volume {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.grid-item-nft {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+.grid-item-dapp {
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+}
+.grid-img {
+    transform: scale(1.07);
+    border-radius: 20px;
+}
