@@ -5,7 +5,7 @@ import { HighlightText } from "@/app/2023-wrapped/components/HighlightText";
 import { Toolbar } from "@/app/2023-wrapped/components/Toolbar";
 import { Routes } from "@/configs/routes";
 
-export type ReviewNftDappPageProps = {};
+type ReviewNftDappPageProps = {};
 
 export const metadata: Metadata = {
   title: "Review Nft & Dapp",

@@ -9,7 +9,7 @@ import { Routes } from "@/configs/routes";
 import { NavBackButton } from "@/app/2023-wrapped/components/NavBackButton";
 import { Toolbar } from "@/app/2023-wrapped/components/Toolbar";
 
-export type ReviewTxnPageeProps = {};
+type ReviewTxnPageeProps = {};
 
 export const metadata: Metadata = {
   title: "Review Txn",

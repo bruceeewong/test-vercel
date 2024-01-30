@@ -1,9 +1,9 @@
-import { Metadata, NextPage } from "next";
+import { Metadata } from "next";
 import Image from "next/image";
 import clsx from "clsx";
 import { CustomConnectButton } from "@/components/buttons/CustomConnectButton";
 
-export type WelcomePageProps = NextPage & {};
+type WelcomePageProps = {};
 
 export const metadata: Metadata = {
   title: "Welcome",

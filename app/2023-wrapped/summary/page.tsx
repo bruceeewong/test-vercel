@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-export type ReviewSummaryPageProps = {};
+type ReviewSummaryPageProps = {};
 
 export const metadata: Metadata = {
   title: "Summary",
