@@ -56,7 +56,7 @@ export default function WelcomePage(props: WelcomePageProps) {
           crypto world during the year, and what your activities were.
         </p>
       </section>
-      <CustomConnectButton className={"mt-16"} {...props} />
+      <CustomConnectButton className={"mt-12"} {...props} />
     </main>
   );
 }
