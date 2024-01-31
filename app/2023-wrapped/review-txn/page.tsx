@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { SoftCard } from "@/app/2023-wrapped/components/SoftCard";
 import { TxnCards } from "@/app/2023-wrapped/review-txn/components/TxnCards";
-import { HighlightText } from "@/app/2023-wrapped/components/HighlightText/HighlightText";
 import { Routes } from "@/configs/routes";
 import {
   SupportedSocialMedia,

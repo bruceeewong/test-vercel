@@ -1,4 +1,4 @@
-import { ScreenshotClientCode } from "@/app/screenshot/ScreenshotClientCode";
+import ScreenshotClientCode from "@/app/screenshot/ScreenshotClientCode";
 import SuietLogoSvg from "@/public/img/suiet-logo-bare.svg";
 
 export type ComponentProps = {};

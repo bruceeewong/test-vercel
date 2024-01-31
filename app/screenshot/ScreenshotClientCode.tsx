@@ -1,18 +1,12 @@
 "use client";
 
-import { Extendable } from "@/types/global";
-import { useCallback, useEffect } from "react";
+import { Suspense, useCallback, useEffect } from "react";
 import { debounce } from "next/dist/server/utils";
 import { message } from "antd";
 import DOMPurify from "dompurify";
 import { useSearchParams } from "next/navigation"; // if displaying data
 
-export type ScreenshotClientCodeProps = Extendable & {
-  screenshotName?: string;
-};
-
-export const ScreenshotClientCode = (props: ScreenshotClientCodeProps) => {
-  const { screenshotName = "screenshot" } = props;
+const ScreenshotCode = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const searchParams = useSearchParams();
 
@@ -96,3 +90,11 @@ export const ScreenshotClientCode = (props: ScreenshotClientCodeProps) => {
 
   return <>{contextHolder}</>;
 };
+
+export default function ScreenshotClientCode() {
+  return (
+    <Suspense fallback={null}>
+      <ScreenshotCode />
+    </Suspense>
+  );
+}

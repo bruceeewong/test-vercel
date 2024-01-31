@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { SoftCard } from "@/app/2023-wrapped/components/SoftCard";
 import { NftCards } from "@/app/2023-wrapped/review-nft-dapp/components/NftCards";
-import { HighlightText } from "@/app/2023-wrapped/components/HighlightText";
 import {
   SupportedSocialMedia,
   Toolbar,
