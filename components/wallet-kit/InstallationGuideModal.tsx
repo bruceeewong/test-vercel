@@ -1,6 +1,6 @@
 import { BaseModal } from "@/components/modal/BaseModal";
 import { Extendable } from "@/types/global";
-import { InstallationGuide } from "@/components/modal/InstallationGuide";
+import { InstallationGuide } from "@/components/wallet-kit/InstallationGuide";
 import { IDefaultWallet } from "@suiet/wallet-kit";
 
 export type InstallationGuideModalProps = Extendable & {

@@ -10,7 +10,7 @@ import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 import { debounce } from "next/dist/server/utils";
 import clsx from "clsx";
-import { InstallationGuideModal } from "@/components/modal/InstallationGuideModal";
+import { InstallationGuideModal } from "@/components/wallet-kit/InstallationGuideModal";
 
 export type ConnectButtonProps = Extendable & {};
 

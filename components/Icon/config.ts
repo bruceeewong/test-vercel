@@ -3,4 +3,6 @@ export const iconMap = {
   "external-link": "external-link.svg",
   screenshot: "screenshot.svg",
   "close-gradient-blue": "close-gradient-blue.svg",
+  wallet: "wallet.svg",
+  disconnect: "disconnect.svg",
 };

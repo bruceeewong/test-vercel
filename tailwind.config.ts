@@ -18,6 +18,10 @@ const config: Config = {
           400: "#7D89B0",
           700: "#404968",
         },
+        error: {
+          "50": "#FEF3F2",
+          "500": "#F04438",
+        },
         "gray-btn-hover": "#EFF1F5",
         accent: "#0096FF",
       },
