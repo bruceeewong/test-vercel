@@ -7,7 +7,7 @@ import {
   SupportedSocialMedia,
   Toolbar,
   ToolbarContinueButton,
-  ToolbarCopyButton,
+  ToolbarScreenshotButton,
   ToolbarShareButton,
 } from "@/app/2023-wrapped/components/Toolbar";
 import clsx from "clsx";
@@ -54,7 +54,9 @@ export default function ReviewTxnPage(props: ReviewTxnPageeProps) {
         <Toolbar
           className={clsx("justify-end gap-4", "md:w-[1200px] md:justify-end")}
         >
-          <ToolbarCopyButton />
+          <ToolbarScreenshotButton
+            screenshotName={"suiet-2023wrapped-transaction-review"}
+          />
           <ToolbarShareButton socialMediaName={SupportedSocialMedia.TWITTER} />
           <ToolbarContinueButton url={Routes.WRAP23__REVIEW_NFT_DAPP} />
         </Toolbar>

@@ -6,7 +6,7 @@ import {
   SupportedSocialMedia,
   Toolbar,
   ToolbarContinueButton,
-  ToolbarCopyButton,
+  ToolbarScreenshotButton,
   ToolbarPrevButton,
   ToolbarShareButton,
 } from "@/app/2023-wrapped/components/Toolbar";
@@ -54,7 +54,9 @@ export default function ReviewNftDappPage(props: ReviewNftDappPageProps) {
         <Toolbar className={clsx("justify-end gap-4", "md:w-[1200px]")}>
           <ToolbarPrevButton url={Routes.WRAP23__REVIEW_TXN} />
           <div className={"flex items-center gap-4"}>
-            <ToolbarCopyButton />
+            <ToolbarScreenshotButton
+              screenshotName={"suiet-2023wrapped-nft-dapp-review"}
+            />
             <ToolbarShareButton
               socialMediaName={SupportedSocialMedia.TWITTER}
             />

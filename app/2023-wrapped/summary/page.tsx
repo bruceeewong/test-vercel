@@ -3,7 +3,7 @@ import clsx from "clsx";
 import {
   SupportedSocialMedia,
   Toolbar,
-  ToolbarCopyButton,
+  ToolbarScreenshotButton,
   ToolbarPrevButton,
   ToolbarShareButton,
 } from "@/app/2023-wrapped/components/Toolbar";
@@ -32,7 +32,9 @@ export default function ReviewSummaryPage(props: ReviewSummaryPageProps) {
         <Toolbar className={clsx("justify-between gap-4", "")}>
           <ToolbarPrevButton url={Routes.WRAP23__REVIEW_NFT_DAPP} />
           <div className={"flex items-center gap-4"}>
-            <ToolbarCopyButton />
+            <ToolbarScreenshotButton
+              screenshotName={"suiet-2023wrapped-summary"}
+            />
             <ToolbarShareButton
               socialMediaName={SupportedSocialMedia.TWITTER}
             />
