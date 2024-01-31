@@ -13,7 +13,7 @@ import {
 import { Routes } from "@/configs/routes";
 import clsx from "clsx";
 
-export type ReviewNftDappPageProps = {};
+type ReviewNftDappPageProps = {};
 
 export const metadata: Metadata = {
   title: "Review Nft & Dapp",

@@ -17,7 +17,7 @@ import {
 } from "@/app/2023-wrapped/components/Toolbar";
 import clsx from "clsx";
 
-export type ReviewTxnPageeProps = {};
+type ReviewTxnPageeProps = {};
 
 export const metadata: Metadata = {
   title: "Review Txn",

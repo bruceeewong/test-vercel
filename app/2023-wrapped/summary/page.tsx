@@ -15,7 +15,7 @@ import { Routes } from "@/configs/routes";
 import { ToolbarCloseButton } from "@/app/2023-wrapped/components/Toolbar/ToolbarCloseButton";
 import SuietLogoBare from "@/public/img/suiet-logo-bare.svg";
 
-export type ReviewSummaryPageProps = {};
+type ReviewSummaryPageProps = {};
 
 export const metadata: Metadata = {
   title: "Summary",
