@@ -12,6 +12,7 @@ import {
 } from "@/app/2023-wrapped/components/Toolbar";
 import { Routes } from "@/configs/routes";
 import clsx from "clsx";
+import { Statistics } from "@/app/2023-wrapped/review-nft-dapp/components/Statistics";
 
 type ReviewNftDappPageProps = {};
 
@@ -37,25 +38,7 @@ export default function ReviewNftDappPage(props: ReviewNftDappPageProps) {
           )}
         >
           <NftCards />
-          <div
-            className={clsx(
-              "flex flex-col max-w-sm mt-4",
-              "md:pt-[40px] md:gap-4 md:max-w-[400px]",
-            )}
-          >
-            <div>
-              <p className={"main-font text-accent"}>2023,</p>
-              <p className={"main-font text-accent"}>
-                you used <HighlightText>26</HighlightText> DApps, including{" "}
-                <HighlightText>11</HighlightText> investments completed36
-              </p>
-            </div>
-            <p className={"main-font text-accent mt-4"}>
-              you made <HighlightText>25</HighlightText> NFT transactions, on 28
-              Sep, <HighlightText>79.8</HighlightText> SUI was your your largest
-              NFT purchase
-            </p>
-          </div>
+          <Statistics />
         </div>
       </SoftCard>
       <footer className={clsx("mt-16 mb-12", "md:mt-[40px] md:mb-0")}>
