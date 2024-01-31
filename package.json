@@ -19,12 +19,14 @@
     "dayjs": "^1.11.10",
     "lodash-es": "^4.17.21",
     "next": "14.1.0",
+    "path-browserify": "^1.0.1",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
+    "@types/path-browserify": "^1.0.2",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
