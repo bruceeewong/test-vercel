@@ -4,6 +4,8 @@ import { Extendable } from "@/types/global";
 import { useCallback, useEffect } from "react";
 import { debounce } from "next/dist/server/utils";
 import { message } from "antd";
+import DOMPurify from "dompurify";
+import { useSearchParams } from "next/navigation"; // if displaying data
 
 export type ScreenshotClientCodeProps = Extendable & {
   screenshotName?: string;
@@ -12,6 +14,14 @@ export type ScreenshotClientCodeProps = Extendable & {
 export const ScreenshotClientCode = (props: ScreenshotClientCodeProps) => {
   const { screenshotName = "screenshot" } = props;
   const [messageApi, contextHolder] = message.useMessage();
+  const searchParams = useSearchParams();
+
+  const getScreenshotName = () => {
+    let screenshot = searchParams.get("screenshot") || "screenshot";
+    const screenshotName = DOMPurify.sanitize(screenshot?.toString());
+    return screenshotName;
+  };
+
   async function captureScreen() {
     const mediaStream = await navigator.mediaDevices.getDisplayMedia({
       video: {
@@ -67,7 +77,7 @@ export const ScreenshotClientCode = (props: ScreenshotClientCodeProps) => {
     // Optional: Create a link to download the image
     const link = document.createElement("a");
     link.href = image;
-    link.download = `${screenshotName}.png`;
+    link.download = `${getScreenshotName()}.png`;
     link.click();
 
     window.close();

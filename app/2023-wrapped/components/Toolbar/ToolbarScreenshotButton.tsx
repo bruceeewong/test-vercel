@@ -7,12 +7,19 @@ import { Extendable } from "@/types/global";
 import { useCallback } from "react";
 import { debounce } from "next/dist/server/utils";
 
-export type ToolbarCopyButtonProps = Extendable & {};
+export type ToolbarScreenshotButtonProps = Extendable & {
+  screenshotName?: string;
+};
 
-export const ToolbarScreenshotButton = (props: ToolbarCopyButtonProps) => {
+export const ToolbarScreenshotButton = (
+  props: ToolbarScreenshotButtonProps,
+) => {
   const handleScreenshot = useCallback(
     debounce(() => {
-      const url = window.location.origin + "/screenshot";
+      let url = window.location.origin + `/screenshot`;
+      if (props.screenshotName) {
+        url += `?screenshot=${props.screenshotName}`;
+      }
       window.open(url, "_blank", "popup,width=600,height=400,left=200,top=200");
     }, 1000),
     [],
