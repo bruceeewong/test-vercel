@@ -24,9 +24,11 @@ export const metadata: Metadata = {
 export default function ReviewSummaryPage(props: ReviewSummaryPageProps) {
   return (
     <main
-      className={"flex flex-col flex-1 justify-center items-center bg-accent"}
+      className={clsx(
+        "flex flex-col flex-1 justify-center items-center bg-accent p-4",
+      )}
     >
-      <section className={clsx("", "md-w-[1280px] md-h-[680px]")}>
+      <section className={clsx("", "md:w-[1200px] md:h-[660px]")}>
         <div className={clsx(styles["grid-container"])}>
           <div
             className={clsx(
@@ -186,8 +188,10 @@ export default function ReviewSummaryPage(props: ReviewSummaryPageProps) {
         </div>
       </section>
 
-      <footer className={"mt-[40px]"}>
-        <Toolbar className={"w-[1280px]"}>
+      <footer
+        className={clsx("mt-16 mb-12", "md:mt-[40px] md:mb-0 md:w-[1200px]")}
+      >
+        <Toolbar className={clsx("justify-between gap-4", "")}>
           <ToolbarPrevButton url={Routes.WRAP23__REVIEW_NFT_DAPP} />
           <div className={"flex items-center gap-4"}>
             <ToolbarCopyButton />

@@ -33,6 +33,7 @@ export default function WelcomePage(props: WelcomePageProps) {
           width={88}
           height={88}
           alt={"suiet-logo"}
+          className={clsx("w-[60px] h-[60px]", "md:w-[88px] md:h-[88px]")}
         />
         <h1
           className={clsx(
@@ -45,12 +46,17 @@ export default function WelcomePage(props: WelcomePageProps) {
           <br />
           2023 Wrapped
         </h1>
-        <p className={clsx("text-gray-cool-400", "md:max-w-[493px]")}>
+        <p
+          className={clsx(
+            "text-gray-cool-400 text-sm",
+            "md:max-w-[493px] md:text-md",
+          )}
+        >
           Say hello to your Suiet wallet for 2023. Find out you kept joining in
           crypto world during the year, and what your activities were.
         </p>
       </section>
-      <CustomConnectButton className={"mt-12"} {...props} />
+      <CustomConnectButton className={"mt-16"} {...props} />
     </main>
   );
 }
