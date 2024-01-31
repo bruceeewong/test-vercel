@@ -48,7 +48,7 @@ export default function WelcomePage(props: WelcomePageProps) {
         </h1>
         <p
           className={clsx(
-            "text-gray-cool-400 text-sm",
+            "text-gray-cool-400 text-sm text-center",
             "md:max-w-[493px] md:text-md",
           )}
         >
