@@ -2,20 +2,16 @@ import { Metadata } from "next";
 import { SoftCard } from "@/app/2023-wrapped/components/SoftCard";
 import { TxnCards } from "@/app/2023-wrapped/review-txn/components/TxnCards";
 import { HighlightText } from "@/app/2023-wrapped/components/HighlightText/HighlightText";
-import { Button } from "@/components/Button";
-import { Icon } from "@/components/Icon";
-import Link from "next/link";
 import { Routes } from "@/configs/routes";
-import { NavBackButton } from "@/app/2023-wrapped/components/NavBackButton";
 import {
   SupportedSocialMedia,
   Toolbar,
   ToolbarContinueButton,
   ToolbarCopyButton,
-  ToolbarPrevButton,
   ToolbarShareButton,
 } from "@/app/2023-wrapped/components/Toolbar";
 import clsx from "clsx";
+import { Statistics } from "@/app/2023-wrapped/review-txn/components/Statistics";
 
 type ReviewTxnPageeProps = {};
 
@@ -41,28 +37,7 @@ export default function ReviewTxnPage(props: ReviewTxnPageeProps) {
           )}
         >
           <TxnCards />
-          <div
-            className={clsx(
-              "flex flex-col max-w-sm mt-4",
-              "md:pt-[40px] md:gap-4 md:max-w-[400px]",
-            )}
-          >
-            <div>
-              <p className={"main-font text-accent"}>2023,</p>
-              <p className={"main-font text-accent"}>
-                you made <HighlightText>36</HighlightText> transactions, trading
-                volume was <HighlightText>129</HighlightText> SUI
-              </p>
-            </div>
-            <p className={"main-font text-accent  mt-4"}>
-              including <HighlightText>19.4</HighlightText> SUI network fees,{" "}
-              <HighlightText>20+</HighlightText> kinds of crypto traded
-            </p>
-            <p className={clsx("main-font text-accent mt-4")}>
-              on 9 Jan, <HighlightText>12.8</HighlightText> SUI was your first
-              transaction
-            </p>
-          </div>
+          <Statistics />
         </div>
       </SoftCard>
 
