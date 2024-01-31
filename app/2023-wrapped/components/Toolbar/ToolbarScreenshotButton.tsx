@@ -55,6 +55,10 @@ export const ToolbarScreenshotButton = (props: ToolbarCopyButtonProps) => {
 
     // Draw video frame to canvas
     const ctx = canvas.getContext("2d");
+    if (!ctx) {
+      messageApi.error("Failed to capture screen: no canvas context");
+      return;
+    }
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
     // Stop all video tracks to release the captured screen
