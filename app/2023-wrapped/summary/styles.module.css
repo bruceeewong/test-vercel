@@ -57,21 +57,18 @@
     object-fit: cover;
 }
 .heading-hero {
-    font-family: "Work Sans";
     font-size: 26px;
     font-style: normal;
     font-weight: 700;
     line-height: 32px; /* 114.286% */
 }
 .heading-1 {
-    font-family: "Work Sans";
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: 36px; /* 128.571% */
 }
 .sub-heading-1 {
-    font-family: "Work Sans";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -79,7 +76,6 @@
 }
 
 .heading-2 {
-    font-family: "Work Sans";
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -87,7 +83,6 @@
 }
 
 .heading-3 {
-    font-family: "Work Sans";
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
