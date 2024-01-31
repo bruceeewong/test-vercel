@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/nextjs-registry": "^1.0.0",
     "@mysten/sui.js": "^0.49.1",
     "@radix-ui/themes": "^2.0.3",
     "@suiet/wallet-kit": "^0.2.22",
+    "antd": "^5.13.3",
     "clsx": "^2.1.0",
     "next": "14.1.0",
     "react": "^18",

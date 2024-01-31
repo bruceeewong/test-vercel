@@ -1,7 +1,8 @@
 // These styles apply to every route in the application
 import "./global.css";
 import "@radix-ui/themes/styles.css";
-import { Theme } from "@radix-ui/themes";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { Theme as AntdTheme } from "@/components/antd/Theme";
 
 export default function RootLayout({
   children,
@@ -10,7 +11,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AntdRegistry>
+          <AntdTheme>{children}</AntdTheme>
+        </AntdRegistry>
+      </body>
     </html>
   );
 }
