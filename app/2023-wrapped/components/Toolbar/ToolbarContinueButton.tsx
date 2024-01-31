@@ -6,19 +6,17 @@ import Link from "next/link";
 
 export type ToolbarContinueButtonProps = Extendable & {
   url: string;
+  buttonClassName?: string;
 };
 
 export const ToolbarContinueButton = (props: ToolbarContinueButtonProps) => {
   return (
-    <Button
-      className={clsx(
-        "flex justify-center items-center gap-2",
-        props.className,
-      )}
-    >
-      <Link
-        href={props.url}
-        className={"flex  justify-center items-center gap-2"}
+    <Link href={props.url} className={props.className}>
+      <Button
+        className={clsx(
+          "flex justify-center items-center gap-2",
+          props.buttonClassName,
+        )}
       >
         <span
           className={clsx(
@@ -29,7 +27,7 @@ export const ToolbarContinueButton = (props: ToolbarContinueButtonProps) => {
           Continue
         </span>
         <Icon name={"arrow-right-gradient-blue"} size={16} />
-      </Link>
-    </Button>
+      </Button>
+    </Link>
   );
 };

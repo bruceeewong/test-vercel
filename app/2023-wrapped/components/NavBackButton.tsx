@@ -5,14 +5,15 @@ import Link from "next/link";
 
 export type NavBackButtonProps = Extendable & {
   url: string;
+  buttonClassName?: string;
 };
 
 export const NavBackButton = (props: NavBackButtonProps) => {
   return (
-    <Button className={props.className} style={props.style}>
-      <Link href={props.url}>
+    <Link href={props.url} className={props.className}>
+      <Button className={props.buttonClassName} style={props.style}>
         <Icon name={"arrow-right-gradient-blue"} size={16} rotate={180} />
-      </Link>
-    </Button>
+      </Button>
+    </Link>
   );
 };
