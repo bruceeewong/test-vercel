@@ -21,6 +21,7 @@ const ScreenshotCode = () => {
       video: {
         displaySurface: "browser",
       },
+      audio: false,
     });
     return mediaStream;
   }
@@ -74,6 +75,7 @@ const ScreenshotCode = () => {
     link.download = `${getScreenshotName()}.png`;
     link.click();
 
+    messageApi.success("Screenshot saved!");
     window.close();
   }
 

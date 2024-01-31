@@ -20,7 +20,7 @@ export const ToolbarScreenshotButton = (
       if (props.screenshotName) {
         url += `?screenshot=${props.screenshotName}`;
       }
-      window.open(url, "_blank", "popup,width=600,height=400,left=200,top=200");
+      window.open(url, "_blank", "popup,width=800,height=800,left=200,top=200");
     }, 1000),
     [],
   );
